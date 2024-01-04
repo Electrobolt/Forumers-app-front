@@ -69,7 +69,7 @@ export const action = async ({ request }) => {
 
 const LoginPage = () => {
   return (
-    <div>
+    <div className={styles["login"]}>
       <div className={styles["login-container"]}>
         <div className={styles["login-title"]}>
           <h2>Log in</h2>
@@ -98,7 +98,7 @@ const LoginPage = () => {
         </div>
       </div>
       <h4>You don't have an account? </h4>
-      <button className={styles.logbtn}><Link className={styles.link} to="/signup">Sign up for free</Link></button>
+      <button className={styles.logbtn} style={{width:"13rem",padding:"0.3rem 0.5rem"}}><Link className={styles.link} to="/signup">Sign up for free</Link></button>
     </div>
   );
 };

@@ -96,6 +96,10 @@ Variables
     margin-bottom: 1.25rem;
     color: var(--clr-grey-5);
   }
+  .image{
+    width:5rem;
+    height:5rem;
+  }
   @media screen and (min-width: 800px) {
     h1 {
       font-size: 4rem;

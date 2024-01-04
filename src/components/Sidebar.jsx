@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import { navLinks } from '../data'
+import styles from "../styleSheets/navbar.module.css"
 
 const Sidebar = ({ display }) => {
     const linksContainerRef = useRef(null);
@@ -14,8 +15,8 @@ const Sidebar = ({ display }) => {
         }
     }, [display])
     return (
-        <div className='links-container' ref={linksContainerRef}>
-            <ul className="links" ref={linksRef}>
+        <div className={styles['links-container']} ref={linksContainerRef}>
+            <ul className={styles["links"]} ref={linksRef}>
                 {
                     navLinks.map((link,index) => {
                         const { id, url, text } = link;
