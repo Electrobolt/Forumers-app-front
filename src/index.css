@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
+.FaBars {
+  font-size: 3rem;
+  color: rgb(62, 62, 124);
+}
+.FaBars:hover {
+  font-size: 4rem;
+}
+.sidebar-toggle {
+  background-color: inherit;
+  border: none;
+}
+.sidebar {
+  height: 100vh;
+}
+body{
+    margin:0;
+}
