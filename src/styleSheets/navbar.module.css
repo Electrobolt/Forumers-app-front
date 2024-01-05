@@ -182,6 +182,18 @@ Variables
     color: var(--clr-primary-5);
     padding-left: 1.5rem;
   }
+  .login-button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .login-form button:hover {
+    background-color: #0056b3;
+  }
   .social-icons {
     display: none;
   }
@@ -201,7 +213,7 @@ Variables
       align-items: center;
       justify-content: space-between;
       padding: 1rem;
-    }
+     }
     .nav-header {
       padding: 0;
     }
@@ -233,5 +245,27 @@ Variables
     .social-icons a:hover {
       color: var(--clr-primary-7);
     }
+  }
+    /*
+  =============== 
+  body
+  ===============
+  */
+  
+  
+  /*
+  =============== 
+  footer
+  ===============
+  */
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 20%;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
   }
   

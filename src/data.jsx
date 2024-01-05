@@ -51,16 +51,20 @@ const signupLinks = [
 
 const navLinks = [
   {
-    url:'/platform',
-    text:"platform"
+    url:'/Token',
+    text:"Token"
   },
   {
-    url:'/Usecases',
-    text:"usecases"
+    url:'/Domain',
+    text:"Domain"
   },
   {
-    url:'/Pricing',
-    text:"pricing"
+    url:'/Agent',
+    text:"Agent"
+  },
+  {
+    url:'/Facturation',
+    text:"Facturation"
   },
   {
     url:'/get-reditus-network',
@@ -68,6 +72,30 @@ const navLinks = [
   }
 ]
 const social = [
+  {
+    id: 1,
+    url: 'https://www.twitter.com',
+    icon: <FaFacebook />,
+  },
+  {
+    id: 2,
+    url: 'https://www.twitter.com',
+    icon: <FaTwitter />,
+  },
+  {
+    id: 3,
+    url: 'https://www.twitter.com',
+    icon: <FaLinkedin />,
+  },
+  {
+    id: 4,
+    url: 'https://www.twitter.com',
+    icon: <FaBehance />,
+  },
+  
+]
+
+const logins = [
   {
     id: 1,
     url: 'https://www.twitter.com',

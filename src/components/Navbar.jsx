@@ -16,17 +16,12 @@ const Navbar = () => {
         </button>
       </div>
      <Sidebar display={display}/>
-      <ul className={styles["social-icons"]}>
-        {social.map((socialIcon) => {
-          const { id, url, icon } = socialIcon;
-          return <li key={id}>
-            <a href={url}>{icon}</a>
-          </li>
-        })}
-
-      </ul>
+     
+     <a href='/login' ><button className={styles["login-button"]} type="submit">Login</button></a>
+     <a href='/signup' ><button className={styles["login-button"]} type="submit">Sign Up</button></a>
     </div>
   </nav>
 }
 
 export default Navbar
+
