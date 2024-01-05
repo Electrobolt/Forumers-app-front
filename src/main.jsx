@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Auth0Provider } from "@auth0/auth0-react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import ErrorPage from "./error-page.jsx";
@@ -30,8 +31,17 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <Auth0Provider
+      domain="dev-aq870nmf2gqi3ezg.us.auth0.com"
+      clientId="u2XddJZb7ajX7F0bWOguBHKRCaF5aKMn"
+      authorizationParams={{
+        redirect_uri:"/signup"
+      }}
+    >
+
     <AppProvider>
       <RouterProvider router={router} />
     </AppProvider>
+    </Auth0Provider>
   </React.StrictMode>
 );
