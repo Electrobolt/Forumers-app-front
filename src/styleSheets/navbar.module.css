@@ -184,7 +184,7 @@ Variables
     padding-left: 1.5rem;
   }
   .login-button{
-    width: 100%;
+    /* width: 100%; */
     padding: 10px;
     border: none;
     border-radius: 3px;

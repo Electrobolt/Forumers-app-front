@@ -33,9 +33,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Auth0Provider
       domain="dev-aq870nmf2gqi3ezg.us.auth0.com"
-      clientId="u2XddJZb7ajX7F0bWOguBHKRCaF5aKMn"
+      clientId="IOo9dg8jihrKsKvzCAj1SgfJ2yN2p9IS"
       authorizationParams={{
-        redirect_uri:"/signup"
+        redirect_uri:window.location.origin
       }}
     >
 
