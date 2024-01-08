@@ -1,0 +1,34 @@
+.dashboard-container{
+    background-color: #1f1e37;
+    color: white;
+    width: 15rem;
+}
+.dashboard-items{
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 1rem;
+}
+.dashboard-user{
+  border-bottom: 1px solid gray;
+  padding: 1rem;
+  font-weight: bold;
+}
+.dashboard-link{
+  color: gainsboro;
+}
+.dashboard-link:hover{
+  color: gray;
+}
+.dashboard-titles{
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+.dashboard-block{
+  margin-left: 1rem;
+}
+.dashboard-user-img{
+  border-radius: 6px;
+  border: 1px solid #1f1ea7;
+  margin-right: 5px;
+}

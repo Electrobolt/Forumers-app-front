@@ -1,8 +1,7 @@
 import {FaHome} from "react-icons/fa"
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import { FaBehance, FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa'
-
+import { FaBehance, FaFacebook, FaLinkedin, FaTwitter, FaRocket, FaEye, FaGlobe} from 'react-icons/fa'
 
 const sidebarData = [
   { 
@@ -51,20 +50,16 @@ const signupLinks = [
 
 const navLinks = [
   {
-    url:'/Token',
-    text:"Token"
+    url:'/platform',
+    text:"platform"
   },
   {
-    url:'/Domain',
-    text:"Domain"
+    url:'/Usecases',
+    text:"usecases"
   },
   {
-    url:'/Agent',
-    text:"Agent"
-  },
-  {
-    url:'/Facturation',
-    text:"Facturation"
+    url:'/Pricing',
+    text:"pricing"
   },
   {
     url:'/get-reditus-network',
@@ -94,29 +89,26 @@ const social = [
   },
   
 ]
-
-const logins = [
+const DashboardData = [
   {
-    id: 1,
-    url: 'https://www.twitter.com',
-    icon: <FaFacebook />,
+    title: "Getting Started",
+    icon: <FaRocket/>,
+    listItems: ["Setup & Installation", "Your Authtoken"]
   },
   {
-    id: 2,
-    url: 'https://www.twitter.com',
-    icon: <FaTwitter />,
+    title: "Cloud Edge",
+    icon: <FaGlobe/>,
+    listItems: ["Endpoints", "Edges", "Domains", "TCP Adresses"]
   },
   {
-    id: 3,
-    url: 'https://www.twitter.com',
-    icon: <FaLinkedin />,
+    title: "Tunnels",
+    icon:<FaEye/>,
+    listItems: ["Agents", "Authtokens", "SSH Public Keys", "Ingress"]
   },
   {
-    id: 4,
-    url: 'https://www.twitter.com',
-    icon: <FaBehance />,
-  },
-  
+    title: "Observability",
+    icon:<FaEye/>,
+    listItems: ["Events"]
+  }
 ]
-
-export {social,navLinks,signupLinks,loginLinks,sidebarData}
+export {social,navLinks,signupLinks,loginLinks,sidebarData, DashboardData}
