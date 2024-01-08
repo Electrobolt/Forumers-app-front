@@ -1,8 +1,7 @@
 import {FaHome} from "react-icons/fa"
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import { FaBehance, FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa'
-
+import { FaBehance, FaFacebook, FaLinkedin, FaTwitter, FaRocket, FaEye, FaGlobe} from 'react-icons/fa'
 
 const sidebarData = [
   { 
@@ -90,5 +89,26 @@ const social = [
   },
   
 ]
-
-export {social,navLinks,signupLinks,loginLinks,sidebarData}
+const DashboardData = [
+  {
+    title: "Getting Started",
+    icon: <FaRocket/>,
+    listItems: ["Setup & Installation", "Your Authtoken"]
+  },
+  {
+    title: "Cloud Edge",
+    icon: <FaGlobe/>,
+    listItems: ["Endpoints", "Edges", "Domains", "TCP Adresses"]
+  },
+  {
+    title: "Tunnels",
+    icon:<FaEye/>,
+    listItems: ["Agents", "Authtokens", "SSH Public Keys", "Ingress"]
+  },
+  {
+    title: "Observability",
+    icon:<FaEye/>,
+    listItems: ["Events"]
+  }
+]
+export {social,navLinks,signupLinks,loginLinks,sidebarData, DashboardData}

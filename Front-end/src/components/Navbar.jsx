@@ -4,6 +4,8 @@ import { sidebarData, social } from "../data";
 import logo from "../logo.png";
 import Sidebar from "../components/Sidebar";
 import styles from "../styleSheets/navbar.module.css";
+import { Link } from "react-router-dom";
+import LoginButton from "../components/loginButton";
 
 const Navbar = () => {
   const [display, setDisplay] = useState(false);
@@ -12,22 +14,17 @@ const Navbar = () => {
       <div className={styles["nav-center"]}>
         <div className={styles["nav-header"]}>
           <img src={logo} alt="logo" className={styles["image"]} />
-          <h3>Reditus Network</h3>
           <button className={styles["nav-toggle"]}>
             <FaBars onClick={() => setDisplay(!display)} />
           </button>
         </div>
         <Sidebar display={display} />
-        <ul className={styles["social-icons"]}>
-          {social.map((socialIcon) => {
-            const { id, url, icon } = socialIcon;
-            return (
-              <li key={id}>
-                <a href={url}>{icon}</a>
-              </li>
-            );
-          })}
-        </ul>
+        <LoginButton />
+        <Link to="/signup">
+          <button className={styles["login-button"]} type="submit">
+            Sign Up
+          </button>
+        </Link>
       </div>
     </nav>
   );
