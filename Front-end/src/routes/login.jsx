@@ -3,7 +3,7 @@ import axios from "axios";
 import { FcGoogle } from "react-icons/fc";
 import { Link, Form, redirect } from "react-router-dom";
 import globalInstance from "../global";
-import { loginLinks, sidebarData } from "../data";
+import { loginLinks, sidebarData } from "../libs/data";
 
 import styles from "../styleSheets/login.module.css";
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styleSheets/body.module.css";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   return (
@@ -17,8 +18,8 @@ const Body = () => {
                 Get Started
               </button>
             </a>
-            <button className={styles["tech-button"]}>
-              <a href="https://ngrok.com/docs/what-is-ngrok/" target="_blank">
+            <div className={styles["tech-button"]}>
+              <Link to="https://ngrok.com/docs/what-is-ngrok/">
                 <div>
               <button className={styles["login-button"]} type="submit">
                   About
@@ -44,8 +45,8 @@ const Body = () => {
                     </svg>
                   </div>
                 </div>
-              </a>
-            </button>
+              </Link>
+            </div>
           </div>
           <img
             src="https://cdn3.iconfinder.com/data/icons/web-hosting-38/64/network-web-hosting-server-512.png"

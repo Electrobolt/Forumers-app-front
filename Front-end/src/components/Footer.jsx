@@ -1,5 +1,5 @@
 import React from 'react';
-import { social } from '../data';
+import { social } from '../libs/data';
 import styles from '../styleSheets/footer.module.css';
 
 const Footer = () => {

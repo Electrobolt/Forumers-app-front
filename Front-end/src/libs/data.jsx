@@ -89,7 +89,7 @@ const social = [
   },
   
 ]
-const DashboardData = [
+const dashboardData = [
   {
     title: "Getting Started",
     icon: <FaRocket/>,
@@ -111,4 +111,10 @@ const DashboardData = [
     listItems: ["Events"]
   }
 ]
-export {social,navLinks,signupLinks,loginLinks,sidebarData, DashboardData}
+const authentificationData = {
+  domain:"dev-aq870nmf2gqi3ezg.us.auth0.com",
+  clientId:"u8FldhV3ZM2BCUxpe7ljnYxVmv0mRCTZ",
+  redirect_uri:"http://localhost:5173"
+
+}
+export {social,navLinks,signupLinks,loginLinks,sidebarData, dashboardData, authentificationData}

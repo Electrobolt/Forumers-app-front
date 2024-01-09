@@ -8,20 +8,17 @@ import Body from "../components/Body";
 import Profile from "../components/userProfile";
 import Section from "../components/Section";
 import Dashboard from "../components/Dashboard";
+import { useAuth0 } from "@auth0/auth0-react";
 
 // import background from "../images/voiture.jpeg";
 
 const MainPage = () => {
   const { openSidebar, openModal } = useGlobalContext();
+  const {isAuthenticated} = useAuth0();
   return (
     // <main style={{backgroundImage: `url("${background}")`}}>
     <div>
-      <Dashboard />
-      <Navbar />
-      <Body />
-      <Profile />
-      <Section />
-      <Footer />
+      {!isAuthenticated && <Navbar />}
       <Outlet />
     </div>
   );

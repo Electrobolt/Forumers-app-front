@@ -1,14 +1,16 @@
 import React, { useState, useRef, useEffect } from "react";
-import { FaBars, FaTwitter } from "react-icons/fa";
-import { sidebarData, social } from "../data";
+import { FaBars } from "react-icons/fa";
 import logo from "../logo.png";
 import Sidebar from "../components/Sidebar";
 import styles from "../styleSheets/navbar.module.css";
-import { Link } from "react-router-dom";
-import LoginButton from "../components/loginButton";
+import LoginButton from "./buttons/loginButton";
+import SignupButton from "./buttons/SignupButton";
+import { useAuth0 } from "@auth0/auth0-react";
+import LogoutButton from "./buttons/LogoutButton";
 
 const Navbar = () => {
   const [display, setDisplay] = useState(false);
+  const { isAuthenticated } = useAuth0();
   return (
     <nav>
       <div className={styles["nav-center"]}>
@@ -19,12 +21,15 @@ const Navbar = () => {
           </button>
         </div>
         <Sidebar display={display} />
-        <LoginButton />
-        <Link to="/signup">
-          <button className={styles["login-button"]} type="submit">
-            Sign Up
-          </button>
-        </Link>
+        {console.log(isAuthenticated)}
+        {isAuthenticated ? (
+          ""
+        ) : (
+          <>
+            <LoginButton />
+            <SignupButton />
+          </>
+        )}
       </div>
     </nav>
   );

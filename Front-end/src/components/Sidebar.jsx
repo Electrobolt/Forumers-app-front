@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import { navLinks } from '../data'
+import { navLinks } from '../libs/data'
 import styles from "../styleSheets/navbar.module.css"
 
 const Sidebar = ({ display }) => {
