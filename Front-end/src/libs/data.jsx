@@ -50,18 +50,22 @@ const signupLinks = [
 
 const navLinks = [
   {
+    id:1,
     url:'/platform',
     text:"platform"
   },
   {
+    id:2,
     url:'/Usecases',
     text:"usecases"
   },
   {
-    url:'/Pricing',
+    id:3,
+    url:'/pricing',
     text:"pricing"
   },
   {
+    id:4,
     url:'/get-reditus-network',
     text:"Get reditus network"
   }

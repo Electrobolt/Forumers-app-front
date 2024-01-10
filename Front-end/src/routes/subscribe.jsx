@@ -1,55 +1,8 @@
-/**
-    * @description      : 
-    * @author           : EUROPEONLINE
-    * @group            : 
-    * @created          : 05/01/2024 - 19:13:05
-    * 
-    * MODIFICATION LOG
-    * - Version         : 1.0.0
-    * - Date            : 05/01/2024
-    * - Author          : EUROPEONLINE
-    * - Modification    : 
-**/
 import React from "react";
 import { Link, Form, redirect } from "react-router-dom";
-import { signupLinks } from "../data";
-
+import { signupLinks } from "../libs/data";
 import styles from "../styleSheets/signup.module.css";
 
-
-export const action = async ({ request }) => {
-  const form = await request.formData();
-  console.log(form);
-  const formEntries = {};
-  for (const [key, value] of form.entries()) {
-    formEntries[key] = value;
-  }
-  const signupData = JSON.stringify(formEntries);
-  console.log(signupData);
-
-  try {
-    const response = await fetch("http://localhost:5172/signup", {
-      method: "POST",
-      mode: "cors",
-      headers: new Headers({
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      }),
-      body: signupData,
-    });
-    if (!response.ok) {
-      throw new Error(`${response.status} ${response.statusText}`);
-    }
-    const data = await response.json();
-    if (data.Accept === true) {
-      return redirect("/login");
-    } else {
-      return redirect("/login");
-    }
-  } catch (error) {
-    console.error(error);
-  }
-};
 
 const Subscribe = () => {
   return (
@@ -59,14 +12,6 @@ const Subscribe = () => {
           <h2>Sign Up</h2>
         </div>
         <Form className={styles["login-form"]} method="POST">
-          <label htmlFor="name">Name</label>
-          <input id="name" type="text" name="nom" placeholder="Name" />
-          <label htmlFor="mail">Email</label>
-          <input id="mail" type="text" name="email" placeholder="Email" />
-          <label htmlFor="password">Password</label>
-          <input id="password" type="password" name="password" placeholder="Password" />
-          <label htmlFor="passwordConf">Confirm password</label>
-          <input id="passwordConf" type="password" name="passwordConf" placeholder="Password" />
           <button type="submit">Sign up</button>
         </Form>
         <div className={styles["login-footer"]}>

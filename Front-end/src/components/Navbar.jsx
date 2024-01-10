@@ -6,11 +6,10 @@ import styles from "../styleSheets/navbar.module.css";
 import LoginButton from "./buttons/loginButton";
 import SignupButton from "./buttons/SignupButton";
 import { useAuth0 } from "@auth0/auth0-react";
-import LogoutButton from "./buttons/LogoutButton";
 
 const Navbar = () => {
   const [display, setDisplay] = useState(false);
-  const { isAuthenticated } = useAuth0();
+  
   return (
     <nav>
       <div className={styles["nav-center"]}>
@@ -21,15 +20,8 @@ const Navbar = () => {
           </button>
         </div>
         <Sidebar display={display} />
-        {console.log(isAuthenticated)}
-        {isAuthenticated ? (
-          ""
-        ) : (
-          <>
-            <LoginButton />
-            <SignupButton />
-          </>
-        )}
+        <LoginButton />
+        <SignupButton />
       </div>
     </nav>
   );

@@ -10,6 +10,8 @@ import LoginPage, { action as loginAction } from "./routes/login.jsx";
 import LayoutWithAuth0 from "./routes/LayoutWithAuth0.jsx";
 import AccountPage from "./routes/AccountPage.jsx";
 import { AppProvider } from "./routes/context.jsx";
+import Profile from "./components/userProfile.jsx";
+import Pricing from "./routes/pricing.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,11 +34,16 @@ const router = createBrowserRouter([
         action: loginAction,
       },
       {
+        path: "/pricing",
+        element: <Pricing />,
+      },
+      {
         path: "/account",
         element: <AuthenticationGuard component={AccountPage}/>,
         children:[
           {
-            
+            path:"/account/profile",
+            element:<AuthenticationGuard component={Profile}/>
           }
         ]
       },

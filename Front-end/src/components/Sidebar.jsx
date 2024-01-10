@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import { navLinks } from '../libs/data'
 import styles from "../styleSheets/navbar.module.css"
+import { Link } from 'react-router-dom';
 
 const Sidebar = ({ display }) => {
     const linksContainerRef = useRef(null);
@@ -20,10 +21,10 @@ const Sidebar = ({ display }) => {
                 {
                     navLinks.map((link,index) => {
                         const { id, url, text } = link;
-                        return <li key={index}>
-                            <a href={link.url}>
+                        return <li key={id}>
+                            <Link to={url}>
                                 {text}
-                            </a>
+                            </Link>
                         </li>
                     })
                 }

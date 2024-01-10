@@ -4,10 +4,10 @@ import styles from "../styleSheets/dashboard.module.css";
 import { dashboardData } from "../libs/data";
 import { Link } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa";
-import logo from "../images/voiture.jpeg";
 import LogoutButton from "./buttons/LogoutButton";
 
 const Dashboard = () => {
+  const logo="";
   return (
     <div className={styles["dashboard-container"]}>
       <div className={styles["dashboard-user"]}>

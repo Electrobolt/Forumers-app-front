@@ -4,7 +4,7 @@ import PageLoader from "../components/page-loader";
 const LayoutWithAuth0 = ({ children }) => {
   const { isLoading,isAuthenticated } = useAuth0();
   console.log(isLoading,isAuthenticated);
-  // if (!isLoading) {
+  // if (isLoading) {
   //   return <PageLoader />;
   // }
 
