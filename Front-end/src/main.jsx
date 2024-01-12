@@ -12,6 +12,8 @@ import AccountPage from "./routes/AccountPage.jsx";
 import { AppProvider } from "./routes/context.jsx";
 import Profile from "./components/userProfile.jsx";
 import Pricing from "./routes/pricing.jsx";
+import Subscribe from "./routes/subscribe.jsx";
+import DownloadAgent from "./routes/downloadAgent.jsx";
 
 const router = createBrowserRouter([
   {
@@ -38,12 +40,20 @@ const router = createBrowserRouter([
         element: <Pricing />,
       },
       {
+        path: "/download",
+        element: <DownloadAgent />,
+      },
+      {
         path: "/account",
         element: <AuthenticationGuard component={AccountPage}/>,
         children:[
           {
             path:"/account/profile",
             element:<AuthenticationGuard component={Profile}/>
+          },
+          {
+            path:"/account/suscribe",
+            element:<AuthenticationGuard component={Subscribe}/>
           }
         ]
       },

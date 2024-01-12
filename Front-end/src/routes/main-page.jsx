@@ -17,7 +17,7 @@ const MainPage = () => {
   const location = useLocation();
   return (
     // <main style={{backgroundImage: `url("${background}")`}}>
-    <div>
+    <div className="main">
       {!isAuthenticated && (
         <>
           <Navbar />

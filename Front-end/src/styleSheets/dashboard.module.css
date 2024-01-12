@@ -1,33 +1,39 @@
-.dashboard-container{
-    background-color: #1f1e37;
-    color: white;
-    width: 15rem;
+.dashboard-container {
+  display: flex;
+  flex-flow:column wrap;
+  background-color: #1f1e37;
+  color: white;
+  width: 15rem;
 }
-.dashboard-items{
+.dashboard-items {
   display: flex;
   flex-flow: column nowrap;
   margin: 1rem;
 }
-.dashboard-user{
+.dashboard-user {
+  display: flex;
   border-bottom: 1px solid gray;
   padding: 1rem;
   font-weight: bold;
 }
-.dashboard-link{
+.dashboard-link {
   color: gainsboro;
 }
-.dashboard-link:hover{
+.dashboard-link:hover {
   color: gray;
 }
-.dashboard-titles{
+.dashboard-titles {
   color: white;
   font-size: 15px;
   font-weight: bold;
 }
-.dashboard-block{
+.dashboard-block {
   margin-left: 1rem;
 }
-.dashboard-user-img{
+.hidden{
+  display:none;
+}
+.dashboard-user-img {
   border-radius: 6px;
   border: 1px solid #1f1ea7;
   margin-right: 5px;

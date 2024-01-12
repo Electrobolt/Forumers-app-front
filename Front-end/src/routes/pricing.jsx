@@ -17,13 +17,13 @@ const Pricing = () => {
         type="PREMIUM"
         text="Deliver globally available high-performance apps and APIs"
         content_button="Subscribe"
-        link="/account"
+        link="/account/suscribe"
       />
       <PricingItem
         type="VIP"
         text="For businesses with additional security and support needs"
         content_button="Subscribe"
-        link="/account"
+        link="/account/suscribe"
       />
     </div>
   );

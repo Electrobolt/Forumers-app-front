@@ -56,17 +56,12 @@ const navLinks = [
   },
   {
     id:2,
-    url:'/Usecases',
-    text:"usecases"
-  },
-  {
-    id:3,
     url:'/pricing',
     text:"pricing"
   },
   {
-    id:4,
-    url:'/get-reditus-network',
+    id:3,
+    url:'/download',
     text:"Get reditus network"
   }
 ]
@@ -95,25 +90,18 @@ const social = [
 ]
 const dashboardData = [
   {
+    id:1,
     title: "Getting Started",
     icon: <FaRocket/>,
     listItems: ["Setup & Installation", "Your Authtoken"]
   },
   {
-    title: "Cloud Edge",
-    icon: <FaGlobe/>,
-    listItems: ["Endpoints", "Edges", "Domains", "TCP Adresses"]
-  },
-  {
+    id:2,
     title: "Tunnels",
     icon:<FaEye/>,
-    listItems: ["Agents", "Authtokens", "SSH Public Keys", "Ingress"]
+    listItems: ["Agents"]
   },
-  {
-    title: "Observability",
-    icon:<FaEye/>,
-    listItems: ["Events"]
-  }
+  
 ]
 const authentificationData = {
   domain:"dev-aq870nmf2gqi3ezg.us.auth0.com",

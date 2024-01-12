@@ -13,11 +13,11 @@ const Body = () => {
               A reverse proxy platform that allows developers to test the
               integration of third-party services into their application.
             </h2>
-            <a href="/signup">
+            <Link to="/signup">
               <button className={styles["login-button"]} type="submit">
                 Get Started
               </button>
-            </a>
+            </Link>
             <div className={styles["tech-button"]}>
               <Link to="https://ngrok.com/docs/what-is-ngrok/">
                 <div>
