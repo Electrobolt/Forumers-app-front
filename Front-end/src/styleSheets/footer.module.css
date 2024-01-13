@@ -1,12 +1,11 @@
 .footer {
-
-  height:11rem;
-  background-color: #0e3265;
-  padding: 10px 20px; 
-  color: #fff;
+  background-color: #689fd3;
+  padding: 10px 20px;
+  color: #000;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  justify-content: space-between;
 }
 
 .social-icons {
@@ -22,13 +21,13 @@
 }
 
 .social-icons a {
-  color: #fff;
+  color: #056bfa;
   font-size: 20px;
   text-decoration: none;
 }
 
 .social-icons a:hover {
-  color: #4b6486;
+  color: var(--clr-myblue);
 }
 
 .footerBottom {
@@ -38,34 +37,32 @@
 .menu {
   list-style: none;
   display: flex;
-  flex-flow: column wrap;
-  align-items: flex-start;
-  padding-right: 20px;
-  margin-bottom: 20px;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-around;
+  /* padding-right: 20px;
+  margin-bottom: 20px; */
 }
 
-.menu li {
+/* .menu li {
   margin: 1px 10px;
-}
+} */
 
-.menu button {
-  border: none;
-  background-color: inherit;
-  color: inherit;
+.list span{
+  font-weight: 700;
+  color:#f7f7f7;
   font-size: 18px;
-  outline: none; /* Remove the outline on button focus */
-  cursor: pointer;
 }
 
-.menu button:hover {
-  color: #4b6486;
+li > a {
+  color: #e0e0e0;
+  font-size: 16px;
 }
-
-.menu .noBorder {
-  border: none;
+li > a:hover {
+  color: var(--clr-myblue);
 }
 
 .footerBottom p {
-  color: #e7eaee;
+  color: #f0eeee;
   margin: 0;
 }

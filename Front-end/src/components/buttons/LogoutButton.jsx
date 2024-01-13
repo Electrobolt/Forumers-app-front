@@ -16,8 +16,7 @@ const LogoutButton = () => {
   return (
     <button
       onClick={handleLogout}
-      className={styles["login-button"]}
-      type="submit"
+      className={`${styles["logout-button"]} ${styles["button"]}`}
     >
       Logout
     </button>

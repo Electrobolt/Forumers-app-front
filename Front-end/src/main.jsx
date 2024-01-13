@@ -14,6 +14,11 @@ import Profile from "./components/userProfile.jsx";
 import Pricing from "./routes/pricing.jsx";
 import Subscribe from "./routes/subscribe.jsx";
 import DownloadAgent from "./routes/downloadAgent.jsx";
+import Authtoken from "./routes/authtoken.jsx";
+import AboutPage from "./routes/about-page.jsx";
+import AgentList from "./routes/agent-list.jsx";
+import {loader as agentLoader} from "./routes/agent-list.jsx";
+import {loader as tokenLoader} from "./routes/authtoken";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +49,10 @@ const router = createBrowserRouter([
         element: <DownloadAgent />,
       },
       {
+        path: "/about",
+        element: <AboutPage />,
+      },
+      {
         path: "/account",
         element: <AuthenticationGuard component={AccountPage}/>,
         children:[
@@ -54,6 +63,20 @@ const router = createBrowserRouter([
           {
             path:"/account/suscribe",
             element:<AuthenticationGuard component={Subscribe}/>
+          },
+          {
+            path:"/account/authtoken",
+            element:<AuthenticationGuard component={Authtoken}/>,
+            loader:tokenLoader
+          },
+          {
+            path:"/account/download",
+            element:<AuthenticationGuard component={DownloadAgent}/>
+          },
+          {
+            path:"/account/agents",
+            element:<AuthenticationGuard component={AgentList}/>,
+            loader:agentLoader
           }
         ]
       },

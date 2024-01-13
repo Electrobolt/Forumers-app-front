@@ -21,7 +21,7 @@ const MainPage = () => {
       {!isAuthenticated && (
         <>
           <Navbar />
-          {location.pathname == "/" ? (
+          {location.pathname === "/" ? (
             <>
               <Body />
               <Section />

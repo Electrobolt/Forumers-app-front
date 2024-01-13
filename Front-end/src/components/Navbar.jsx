@@ -9,9 +9,9 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
   const [display, setDisplay] = useState(false);
-  
+
   return (
-    <nav>
+    <nav className>
       <div className={styles["nav-center"]}>
         <div className={styles["nav-header"]}>
           <img src={logo} alt="logo" className={styles["image"]} />
@@ -20,8 +20,10 @@ const Navbar = () => {
           </button>
         </div>
         <Sidebar display={display} />
-        <LoginButton />
-        <SignupButton />
+        <div className={styles["gap-buttons"]}>
+          <LoginButton />
+          <SignupButton />
+        </div>
       </div>
     </nav>
   );

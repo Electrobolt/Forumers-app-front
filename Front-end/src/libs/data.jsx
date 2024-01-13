@@ -1,27 +1,9 @@
 import {FaHome} from "react-icons/fa"
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import { FaBehance, FaFacebook, FaLinkedin, FaTwitter, FaRocket, FaEye, FaGlobe} from 'react-icons/fa'
-
-const sidebarData = [
-  { 
-    id:1,
-    link: "/main",
-    text:"Home",
-    icon: <FaHome />,
-},
-{ 
-    id:2,
-    link: "/about",
-    text:"About"
-    
-},
-{ 
-    id:3,
-    link: "/news",
-    text:"News"
-  },
-];
+import { FaBehance, FaFacebook, FaLinkedin, FaTwitter, FaGlobe} from 'react-icons/fa'
+import { TbTransferIn } from "react-icons/tb";
+import { IoMdRocket } from "react-icons/io";
 
 const loginLinks = [
     { 
@@ -92,14 +74,15 @@ const dashboardData = [
   {
     id:1,
     title: "Getting Started",
-    icon: <FaRocket/>,
-    listItems: ["Setup & Installation", "Your Authtoken"]
+    icon: <IoMdRocket />,
+    listItems: [{title:"Setup & Installation",
+  link:"/account/download"}, {title:"Your Authtoken",link:"/account/authtoken"}]
   },
   {
     id:2,
     title: "Tunnels",
-    icon:<FaEye/>,
-    listItems: ["Agents"]
+    icon:<TbTransferIn />,
+    listItems: [{title:"Agents",link:"/account/agents"}]
   },
   
 ]
@@ -109,4 +92,4 @@ const authentificationData = {
   redirect_uri:"http://localhost:5173"
 
 }
-export {social,navLinks,signupLinks,loginLinks,sidebarData, dashboardData, authentificationData}
+export {social,navLinks,signupLinks,loginLinks, dashboardData, authentificationData}

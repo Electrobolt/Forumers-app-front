@@ -16,7 +16,7 @@ const SignupButton = () => {
   };
 
   return (
-    <button onClick={handleSignUp} className={styles["login-button"]}>
+    <button onClick={handleSignUp} className={`${styles["signup-button"]} ${styles["button"]}`}>
       Sign Up
     </button>
   );
