@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Form, redirect } from "react-router-dom";
-import { signupLinks } from "../data";
+import { signupLinks } from "../libs/data";
 
 import styles from "../styleSheets/signup.module.css";
 

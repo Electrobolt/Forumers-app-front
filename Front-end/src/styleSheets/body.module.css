@@ -2,12 +2,11 @@
   background-color: #18c0ea;
   margin: 0;
   padding: 35px;
-  padding-top:5% ;
+  padding-top:10% ;
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #333;
-  height: 50%;
   box-sizing: border-box;
 }
 .container {
@@ -56,29 +55,26 @@
 }
 
 .login-button{
-  width:auto;
-  margin-top: 10%;
-  margin-left: 10%;
-  padding: 30px;
-  border: none;
+  width:10rem;
+  padding: 17px;
   font-size: 17px;
   border-radius: 10px;
-  background-color: #f79041;
-  color: #ffffff;
+  border-color: transparent;
+  color: #000;
+  background-color: #f2c6a5;
   cursor: pointer;
   row-gap: 3px;
 }
-.tech-button{
-  width: 20%;
-  padding: 10px;
-  font-size: 25px;
-  border-radius: 3px;
-  border: none;
-  background-color: transparent;
-  color: #ffffff;
-  cursor: pointer;
-  row-gap: 3px;
+.buttons{
+  margin-top: 3rem;
+  display: flex;
+  flex-flow: row ;
+  justify-content: center;
+  gap: 4rem;
 }
+.login-button:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);}
 svg:not(:root) {
   overflow: hidden;
 }

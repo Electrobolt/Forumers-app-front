@@ -1,12 +1,11 @@
 .footer {
-  position: relative;
-  width: 100%;
-  background-color: #2cdab4;
-  padding: 20px 50px;
-  color: #fff;
+  background-color: #689fd3;
+  padding: 10px 20px;
+  color: #000;
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   align-items: center;
+  justify-content: space-between;
 }
 
 .social-icons {
@@ -15,7 +14,6 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-  margin-top: 20px;
 }
 
 .social-icons li {
@@ -23,53 +21,48 @@
 }
 
 .social-icons a {
-  color: #fff;
+  color: #056bfa;
   font-size: 20px;
   text-decoration: none;
 }
 
 .social-icons a:hover {
-  color: #29f2db;
+  color: var(--clr-myblue);
 }
 
 .footerBottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 20px;
 }
 
 .menu {
   list-style: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-right: 20px;
-  margin-bottom: 20px;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-around;
+  /* padding-right: 20px;
+  margin-bottom: 20px; */
 }
 
-.menu li {
-  margin: 0 10px;
-}
+/* .menu li {
+  margin: 1px 10px;
+} */
 
-.menu button {
-  border: none;
-  background-color: inherit;
-  color: inherit;
+.list span{
+  font-weight: 700;
+  color:#f7f7f7;
   font-size: 18px;
-  outline: none; /* Remove the outline on button focus */
-  cursor: pointer;
 }
 
-.menu button:hover {
-  color: #29f2db;
+li > a {
+  color: #e0e0e0;
+  font-size: 16px;
 }
-
-.menu .noBorder {
-  border: none;
+li > a:hover {
+  color: var(--clr-myblue);
 }
 
 .footerBottom p {
-  color: rgb(0, 59, 101);
+  color: #f0eeee;
   margin: 0;
 }

@@ -1,9 +1,6 @@
-import React from "react";
-import axios from "axios";
-import { FcGoogle } from "react-icons/fc";
 import { Link, Form, redirect } from "react-router-dom";
 import globalInstance from "../global";
-import { loginLinks, sidebarData } from "../data";
+import { loginLinks,  } from "../libs/data";
 
 import styles from "../styleSheets/login.module.css";
 

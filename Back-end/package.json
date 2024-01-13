@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@hachther/mesomb": "^1.1.1",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "kafkajs": "^2.2.4",
+    "nodemailer": "^6.9.8",
+    "socket.io": "^4.7.3"
+  },
+  "name": "ngrok",
+  "version": "1.0.0",
+  "main": "facturation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,9 +1,21 @@
-import React, { useState } from "react";
 import styles from "../styleSheets/body.module.css";
+import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Body = () => {
+  const { loginWithRedirect } = useAuth0();
+  const handleSignUp = async () => {
+    await loginWithRedirect({
+      appState: {
+        returnTo: "/account",
+      },
+      authorizationParams: {
+        screen_hint: "signup",
+      },
+    });
+  };
   return (
-    <div className={styles["body"]}>
+    <div className={`${styles["body"]} `}>
       <div className={styles["container"]}>
         <div className={styles["welcomeContainer"]}>
           <div className={styles["welcomeText"]}>
@@ -12,40 +24,14 @@ const Body = () => {
               A reverse proxy platform that allows developers to test the
               integration of third-party services into their application.
             </h2>
-            <a href="/signup">
-              <button className={styles["login-button"]} type="submit">
+            <div className={styles["buttons"]}>
+              <button className={styles["login-button"]} onClick={handleSignUp}>
                 Get Started
               </button>
-            </a>
-            <button className={styles["tech-button"]}>
-              <a href="https://ngrok.com/docs/what-is-ngrok/" target="_blank">
-                <div>
-              <button className={styles["login-button"]} type="submit">
-                  About
-              </button>
-                  <div className={`${styles.htmlEmbed} ${styles.wEmbed}`}>
-                    <svg
-                      width="25"
-                      height="15"
-                      viewBox="0 0 25 25"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <defs>
-                        <clipPath id="clip0_903_41715">
-                          <rect
-                            width="24"
-                            height="24"
-                            fill="white"
-                            transform="translate(0.234375 0.823242)"
-                          ></rect>
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                </div>
-              </a>
-            </button>
+              <Link className={styles["about-page"]} to="/about">
+                <button className={styles["login-button"]}>About</button>
+              </Link>
+            </div>
           </div>
           <img
             src="https://cdn3.iconfinder.com/data/icons/web-hosting-38/64/network-web-hosting-server-512.png"

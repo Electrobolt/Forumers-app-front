@@ -1,19 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Auth0Provider } from "@auth0/auth0-react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import ErrorPage from "./error-page.jsx";
-import MainPage from "./routes/root.jsx";
+import AuthenticationGuard from "./components/authentification-guard.jsx";
+import MainPage from "./routes/main-page.jsx";
 import SignUpPage, { action as signupAction } from "./routes/sing-up.jsx";
 import LoginPage, { action as loginAction } from "./routes/login.jsx";
+import LayoutWithAuth0 from "./routes/LayoutWithAuth0.jsx";
+import AccountPage from "./routes/AccountPage.jsx";
 import { AppProvider } from "./routes/context.jsx";
-
+import Profile from "./components/userProfile.jsx";
+import Pricing from "./routes/pricing.jsx";
+import Subscribe from "./routes/subscribe.jsx";
+import DownloadAgent from "./routes/downloadAgent.jsx";
+import Authtoken from "./routes/authtoken.jsx";
+import AboutPage from "./routes/about-page.jsx";
+import AgentList from "./routes/agent-list.jsx";
+import {loader as agentLoader} from "./routes/agent-list.jsx";
+import {loader as tokenLoader} from "./routes/authtoken";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainPage />,
+    element: (
+      <LayoutWithAuth0>
+        <MainPage />
+      </LayoutWithAuth0>
+    ),
     errorElement: <ErrorPage />,
     children: [
       {
@@ -26,22 +40,53 @@ const router = createBrowserRouter([
         element: <LoginPage />,
         action: loginAction,
       },
+      {
+        path: "/pricing",
+        element: <Pricing />,
+      },
+      {
+        path: "/download",
+        element: <DownloadAgent />,
+      },
+      {
+        path: "/about",
+        element: <AboutPage />,
+      },
+      {
+        path: "/account",
+        element: <AuthenticationGuard component={AccountPage}/>,
+        children:[
+          {
+            path:"/account/profile",
+            element:<AuthenticationGuard component={Profile}/>
+          },
+          {
+            path:"/account/suscribe",
+            element:<AuthenticationGuard component={Subscribe}/>
+          },
+          {
+            path:"/account/authtoken",
+            element:<AuthenticationGuard component={Authtoken}/>,
+            loader:tokenLoader
+          },
+          {
+            path:"/account/download",
+            element:<AuthenticationGuard component={DownloadAgent}/>
+          },
+          {
+            path:"/account/agents",
+            element:<AuthenticationGuard component={AgentList}/>,
+            loader:agentLoader
+          }
+        ]
+      },
     ],
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Auth0Provider
-      domain="dev-aq870nmf2gqi3ezg.us.auth0.com"
-      clientId="IOo9dg8jihrKsKvzCAj1SgfJ2yN2p9IS"
-      authorizationParams={{
-        redirect_uri:window.location.origin
-      }}
-    >
-
     <AppProvider>
       <RouterProvider router={router} />
     </AppProvider>
-    </Auth0Provider>
   </React.StrictMode>
 );

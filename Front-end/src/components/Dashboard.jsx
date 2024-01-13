@@ -1,41 +1,104 @@
-/**
-    * @description      : 
-    * @author           : EUROPEONLINE
-    * @group            : 
-    * @created          : 05/01/2024 - 14:13:51
-    * 
-    * MODIFICATION LOG
-    * - Version         : 1.0.0
-    * - Date            : 05/01/2024
-    * - Author          : EUROPEONLINE
-    * - Modification    : 
-**/
-import React, { useRef, useEffect } from 'react'
-import { navLinks } from '../data'
-import styles from "../styleSheets/dashboard.module.css"
-import { DashboardData } from '../data'
-import { Link } from 'react-router-dom'
-import { FaChevronDown } from 'react-icons/fa'
-import logo from '../images/voiture.jpeg'
+import { useState } from "react";
+import styles from "../styleSheets/dashboard.module.css";
+import { dashboardData } from "../libs/data";
+import { NavLink } from "react-router-dom";
+import { FaChevronDown, FaChevronRight } from "react-icons/fa";
+import LogoutButton from "./buttons/LogoutButton";
+import { useAuth0 } from "@auth0/auth0-react";
 
-const Dashboard = ()=>{
+const Dashboard = () => {
+  const [display, setDisplay] = useState(
+    Array(dashboardData.length + 1).fill(false)
+  );
+  const newState = [...display];
+  const handleClick = (id) => {
+    newState[id] = !newState[id];
+    setDisplay(newState);
+  };
+  const { user } = useAuth0();
+  const { picture, name, nickname, email } = user;
+  return (
+    <div className={styles["dashboard-container"]}>
+      <div className={styles["dashboard-user"]}>
+        <img
+          src={picture}
+          width={30}
+          className={styles["dashboard-user-img"]}
+        />
+        <h4>{nickname}</h4>
+      </div>
+      {dashboardData.map((item, index) => {
+        const { id, title, icon, listItems } = item;
         return (
-            <div className={styles['dashboard-container']}>
-              <div className={styles['dashboard-user']}>
-                <img src={logo} width={30} className={styles['dashboard-user-img']}/>  Cédric DADA<FaChevronDown/>
+          <div key={index}>
+            <div className={styles["dashboard-block"]}>
+              <div className={styles["icon-and-title"]}>
+                <span
+                  className={styles["dashboard-titles"]}
+                  onClick={() => handleClick(id)}
+                >
+                  {icon}
+                </span>
+                <span
+                  className={styles["dashboard-titles"]}
+                  onClick={() => handleClick(id)}
+                >
+                  {title}
+                </span>
               </div>
-              {DashboardData.map((item, index) => (
-                <div key={index} className={styles['dashboard-block']}>
-                  <p className={styles['dashboard-titles']}>{item.icon}   {item.title} <FaChevronDown size={15}/></p>
-                  <div className={styles['dashboard-items']}>
-                    {item.listItems.map((option, optionIndex) => (
-                      <Link key={optionIndex} value={option} className={styles['dashboard-link']}>{option}</Link>
-                      ))} 
-                  </div>
-                </div>
-              ))}
+              {display[id] ? (
+                <FaChevronDown
+                  className={`${styles["chevron"]}`}
+                  onClick={() => handleClick(id)}
+                />
+              ) : (
+                <FaChevronRight
+                  className={`${styles["chevron"]}`}
+                  onClick={() => handleClick(id)}
+                />
+              )}
             </div>
-          );
-}
+            {display[id] ? (
+              <div className={styles["dashboard-items"]}>
+                {listItems.map((option, optionIndex) => {
+                  const { title, link } = option;
+                  return (
+                    <NavLink
+                      key={optionIndex}
+                      value={option}
+                      className={({ isActive, isPending }) => {
+                        return (isActive
+                          ? styles["dashboard-active-link"]+" "+styles["dashboard-link"]
+                          : isPending
+                          ? styles["dashboard-active-link"]+" "+styles["dashboard-link"]
+                          : styles["dashboard-link"]);
+                      }}
+                      // className={`${styles["dashboard-link"]} ${console.log(
+                      //   styles[
+                      //     ({ isActive, isPending }) =>
+                      //       isActive
+                      //         ? "dashboard-active-link"
+                      //         : isPending
+                      //         ? "dashboard-active-link"
+                      //         : ""
+                      //   ]
+                      // )}`}
+                      to={link}
+                    >
+                      {title}
+                    </NavLink>
+                  );
+                })}
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
+        );
+      })}
+      <LogoutButton />
+    </div>
+  );
+};
 
-export default Dashboard
+export default Dashboard;

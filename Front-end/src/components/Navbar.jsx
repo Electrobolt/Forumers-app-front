@@ -1,16 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
-import { FaBars, FaTwitter } from "react-icons/fa";
-import { sidebarData, social } from "../data";
+import { FaBars } from "react-icons/fa";
 import logo from "../logo.png";
 import Sidebar from "../components/Sidebar";
 import styles from "../styleSheets/navbar.module.css";
-import { Link } from "react-router-dom";
-import LoginButton from "../components/loginButton";
+import LoginButton from "./buttons/loginButton";
+import SignupButton from "./buttons/SignupButton";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
   const [display, setDisplay] = useState(false);
+
   return (
-    <nav>
+    <nav className>
       <div className={styles["nav-center"]}>
         <div className={styles["nav-header"]}>
           <img src={logo} alt="logo" className={styles["image"]} />
@@ -19,12 +20,10 @@ const Navbar = () => {
           </button>
         </div>
         <Sidebar display={display} />
-        <LoginButton />
-        <Link to="/signup">
-          <button className={styles["login-button"]} type="submit">
-            Sign Up
-          </button>
-        </Link>
+        <div className={styles["gap-buttons"]}>
+          <LoginButton />
+          <SignupButton />
+        </div>
       </div>
     </nav>
   );
