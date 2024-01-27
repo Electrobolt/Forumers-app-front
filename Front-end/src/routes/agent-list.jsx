@@ -8,7 +8,7 @@ export const loader = async () => {
   socket.on("connect", () => {
     console.log("Connected to the server");
   });
-  socket.timeout(10000).emit("front", { message: "get-agent-list" }, (response) => {
+  socket.timeout(10000).emit("front-request", { message: "get-agent-list" }, (response) => {
     data = response.data;
   });
   return data;

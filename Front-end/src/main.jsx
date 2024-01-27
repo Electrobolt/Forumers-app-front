@@ -19,6 +19,7 @@ import AboutPage from "./routes/about-page.jsx";
 import AgentList from "./routes/agent-list.jsx";
 import {loader as agentLoader} from "./routes/agent-list.jsx";
 import {loader as tokenLoader} from "./routes/authtoken";
+import {loader as suscribeLoader} from "./routes/subscribe"
 
 const router = createBrowserRouter([
   {
@@ -61,8 +62,9 @@ const router = createBrowserRouter([
             element:<AuthenticationGuard component={Profile}/>
           },
           {
-            path:"/account/suscribe",
-            element:<AuthenticationGuard component={Subscribe}/>
+            path:"/account/suscribe/:cost",
+            element:<AuthenticationGuard component={Subscribe}/>,
+            loader: suscribeLoader,
           },
           {
             path:"/account/authtoken",

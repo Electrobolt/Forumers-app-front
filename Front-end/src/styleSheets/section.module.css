@@ -165,7 +165,8 @@ h1 {
 }
 
 .updateBox {
-  background-color: #18c0ea;
+  /* background-color: #18c0ea; */
+  background-color: var(--clr-myblue);
   border-radius: 30px;
   padding: 20px;
   width: 50%;
@@ -190,6 +191,6 @@ h1 {
   color: #fff;
 }
 .sectionImage {
-  margin-left: 10px;
   width: 100%;
+  background-color: var(--clr-myblue);
 }

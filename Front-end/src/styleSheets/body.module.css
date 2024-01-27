@@ -1,12 +1,14 @@
 .body {
-  background-color: #18c0ea;
+  /* background-color: #18c0ea; */
+background-color: var(--clr-myblue);
   margin: 0;
   padding: 35px;
   padding-top:10% ;
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: #333;
+  /* color: #333; */
+  color: #fff;
   box-sizing: border-box;
 }
 .container {
