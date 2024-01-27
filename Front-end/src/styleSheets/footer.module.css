@@ -1,5 +1,6 @@
 .footer {
-  background-color: #689fd3;
+  /* background-color: #689fd3; */
+  background-color: var(--clr-myblue);
   padding: 10px 20px;
   color: #000;
   display: flex;
@@ -21,7 +22,8 @@
 }
 
 .social-icons a {
-  color: #056bfa;
+  /* color: #056bfa; */
+  color: #fff;
   font-size: 20px;
   text-decoration: none;
 }

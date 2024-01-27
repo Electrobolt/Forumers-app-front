@@ -4,8 +4,8 @@
   flex-flow:column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   /* height: 100vh;
-  margin: 0;
   background-color: #f8f9fa; */
 } 
 .login-container {
@@ -51,12 +51,15 @@
   gap: 0.5em;
 }
 .logbtn {
-  color: #a19ec7;
+  color: #fff;
   font-size: 0.8rem;
   padding: 2%;
   border:0px solid;
   border-radius:0.25rem 0.25rem;
   width:100%;
+  background-color: var(--clr-myblue);
+  transition: transform 0.3s ease;
+
 }
 .link {
   display: flex;
@@ -71,8 +74,9 @@
   cursor: pointer;
 }
 .logbtn:hover {
-  background-color: rgb(152, 149, 163);
-  transition: background-color 0,4s; 
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 .center, h5{
   text-align:center;

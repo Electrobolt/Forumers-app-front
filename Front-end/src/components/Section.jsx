@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa6";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { MdOutlineSavings } from "react-icons/md";
 import { TbClockStar } from "react-icons/tb";
+import jobs from "../images/jobs-image.png"
 
 
 
@@ -105,10 +106,10 @@ const Section = () => {
           </div>
         </div>
       </section>
-      <section className={styles.imageSection}>
+      <section >
         <div className="wrapper-latest">
           <div className="top-latest">
-            <h1>Future updates </h1>
+            <h1>Some features </h1>
           </div>
           <div className={styles.updateBoxes}>
             <div className={styles.updateBox}>
@@ -161,13 +162,13 @@ const Section = () => {
             </div>
           </div>
         </div>
+      </section>
         <img
           className={styles["sectionImage"]}
           loading="lazy"
-          src="https://www.leisurejobs.com/getasset/c0bb5231-60be-4b88-bc77-4319719fa2e9/"
+          src={jobs}
           alt="Section Image"
         />
-      </section>
     </div>
   );
 };

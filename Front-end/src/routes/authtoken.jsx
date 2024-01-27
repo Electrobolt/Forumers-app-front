@@ -7,7 +7,7 @@ export const loader = async () => {
   socket.on("connect", () => {
     console.log("Connected to the server");
   });
-  socket.timeout(10000).emit("front", { message: "get-tokens-list" }, (response) => {
+  socket.timeout(10000).emit("front-request", { message: "get-tokens-list" }, (response) => {
     data = response.data;
   });
   return data;
