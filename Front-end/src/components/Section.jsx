@@ -4,7 +4,6 @@ import { FaGithub } from "react-icons/fa6";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { MdOutlineSavings } from "react-icons/md";
 import { TbClockStar } from "react-icons/tb";
-import jobs from "../images/jobs-image.png"
 
 
 
@@ -118,57 +117,41 @@ const Section = () => {
                 className={styles.latestImage}
               />
               <h3 className={styles.updateBoxHeader}>
-                Simplified connectivity with our Network Access Service
-              </h3>
-              <p className={styles.updateBoxText}>
-                Unlock the potential of your applications and APIs with our SaaS
-                solution that delivers optimal performance. Enjoy Instant
-                commissioning with no configuration required network and without
-                investment in hardware.
-              </p>
-            </div>
-            <div className={styles.updateBox}>
-              <img
-                src="https://www.svgrepo.com/show/390702/files-folder-document-file.svg"
-                className={styles.latestImage}
-              />
-              <h2 className={styles.updateBoxHeader}>
-                Decentralized On-Demand Access Service
-              </h2>
-              <p className={styles.updateBoxText}>
-                Get global connectivity without the hassle of network
-                configuration and without the need to manage hardware. Our
-                extensive network allows you to provide applications and
-                high-availability APIs with ease Disconcerting
-              </p>
-            </div>
-            <div className={styles.updateBox}>
-              <img
-                loading="lazy"
-                src="https://www.svgrepo.com/show/411837/collaborate.svg"
-                alt=""
-                className={styles.latestImage}
-              />
-              <h2 className={styles.updateBoxHeader}>
-                Secure Access Platform for Modern Applications
-              </h2>
-              <p className={styles.updateBoxText}>
-                Take your applications and APIs to the next level with our
-                Access service powered by an international network. Treat
-                yourself to the simplicity of an all-in-one SaaS solution for
-                Uncompromising performance, without network configuration
-                complex and without reliance on expensive hardware.
-              </p>
+    Simplified Forum Management with Our Platform
+  </h3>
+  <p className={styles.updateBoxText}>
+    Unlock the potential of your online community with our SaaS solution that delivers optimal performance. Enjoy instant setup with no configuration required, allowing you to focus on engaging with your users without the need for hardware investment.
+  </p>
+</div>
+<div className={styles.updateBox}>
+  <img
+    src="https://www.svgrepo.com/show/390702/files-folder-document-file.svg"
+    className={styles.latestImage}
+  />
+  <h2 className={styles.updateBoxHeader}>
+    Decentralized Access to Your Forum Anytime
+  </h2>
+  <p className={styles.updateBoxText}>
+    Achieve global connectivity for your forum without the hassle of complex configurations or hardware management. Our extensive network allows you to provide a seamless experience for your users, ensuring high availability and engagement.
+  </p>
+</div>
+<div className={styles.updateBox}>
+  <img
+    loading="lazy"
+    src="https://www.svgrepo.com/show/411837/collaborate.svg"
+    alt=""
+    className={styles.latestImage}
+  />
+  <h2 className={styles.updateBoxHeader}>
+    Secure Platform for Modern Forum Applications
+  </h2>
+  <p className={styles.updateBoxText}>
+    Elevate your forum and user interactions with our secure access service powered by an international network. Experience the simplicity of an all-in-one SaaS solution that offers uncompromising performance, free from complex configurations and expensive hardware dependencies.
+  </p>
             </div>
           </div>
         </div>
       </section>
-        <img
-          className={styles["sectionImage"]}
-          loading="lazy"
-          src={jobs}
-          alt="Section Image"
-        />
     </div>
   );
 };

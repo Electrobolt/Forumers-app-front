@@ -16,7 +16,7 @@ const Authtoken = () => {
   const tokens = useLoaderData();
   return (
     <div className={styles["container"]}>
-      <h1>Vos tokens</h1>
+      <h1>Your Keys</h1>
       <ul className={styles["token-list"]}>
       {tokens.map((token,index)=>{
         <li>
@@ -33,7 +33,7 @@ const Authtoken = () => {
         <li>
           <div className={styles["token-info"]}>
             <img src="token-icon.png" alt="Token Icon" />
-            <span>Token #2</span>
+            <span>key #2</span>
           </div>
           <div className={styles["token-actions"]}>
             <button>Voir</button>

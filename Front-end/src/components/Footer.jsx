@@ -53,7 +53,7 @@ const Footer = () => {
               );
             })}
           </ul>
-          <p>Copyright &copy; 2024; Designed by TEAM 2-7</p>
+          {/* <p>Copyright &copy; 2024; Designed by TEAM 2-7</p> */}
         </div>
       </div>
       <div></div>

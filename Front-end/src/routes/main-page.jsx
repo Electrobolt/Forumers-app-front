@@ -18,6 +18,7 @@ const MainPage = () => {
   return (
     // <main style={{backgroundImage: `url("${background}")`}}>
     <div className="main">
+
       {!isAuthenticated && (
         <>
           <Navbar />
@@ -30,7 +31,7 @@ const MainPage = () => {
             ""
           )}
         </>
-      )}
+      )} 
       <Outlet />
       <Footer />
     </div>

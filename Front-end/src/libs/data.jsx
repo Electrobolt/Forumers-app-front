@@ -33,18 +33,23 @@ const signupLinks = [
 const navLinks = [
   {
     id:1,
-    url:'/platform',
-    text:"platform"
+    url:'/',
+    text:"Welcome"
   },
   {
     id:2,
+    url:'/about',
+    text:"Documentation"
+  },
+  {
+    id:3,
     url:'/pricing',
     text:"pricing"
   },
   {
-    id:3,
+    id:4,
     url:'/download',
-    text:"Get reditus network"
+    text:"Get your Forum"
   }
 ]
 const social = [
@@ -76,16 +81,17 @@ const dashboardData = [
     title: "Getting Started",
     icon: <IoMdRocket />,
     listItems: [{title:"Setup & Installation",
-  link:"/account/download"}, {title:"Your Authtoken",link:"/account/authtoken"}]
+  link:"/account/download"}, {title:"Your Keys",link:"/account/keys"}]
   },
   {
     id:2,
-    title: "Tunnels",
+    title: "Groups",
     icon:<TbTransferIn />,
-    listItems: [{title:"Agents",link:"/account/agents"}]
+    listItems: [{title:"Forums",link:"/account/forums"},{title:"Forums",link:"/account/Communities"}]
   },
   
 ]
+
 const authentificationData = {
   domain:"dev-aq870nmf2gqi3ezg.us.auth0.com",
   clientId:"u8FldhV3ZM2BCUxpe7ljnYxVmv0mRCTZ",

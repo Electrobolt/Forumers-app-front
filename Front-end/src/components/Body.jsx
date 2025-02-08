@@ -19,24 +19,24 @@ const Body = () => {
       <div className={styles["container"]}>
         <div className={styles["welcomeContainer"]}>
           <div className={styles["welcomeText"]}>
-            <h1 className={styles["heading-h1"]}>Welcome to Reditus Network</h1>
+            <h1 className={styles["heading-h1"]}>Welcome to Forumers</h1>
             <h2 className={styles["heading-h2"]}>
-              A reverse proxy platform that allows developers to test the
-              integration of third-party services into their application.
+              A Forum manager platform that allows developers to integrate
+              of a forum service into their application.
             </h2>
             <div className={styles["buttons"]}>
               <button className={styles["login-button"]} onClick={handleSignUp}>
                 Get Started
               </button>
               <Link className={styles["about-page"]} to="/about">
-                <button className={styles["login-button"]}>About</button>
+                <button className={styles["login-button"]}>Documentation</button>
               </Link>
             </div>
           </div>
           <img
-            src="https://cdn3.iconfinder.com/data/icons/web-hosting-38/64/network-web-hosting-server-512.png"
+            src="src/group-chat-512.png"
             className={`img-unified ${styles.image}`}
-            alt="Network Icon"
+            alt="Chat Icon"
           />
         </div>
       </div>
